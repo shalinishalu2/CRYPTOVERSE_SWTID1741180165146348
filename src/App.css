@@ -1,0 +1,1195 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
+
+/* Base theme colors */
+:root {
+  --dark-bg: #001529;
+  --darker-bg: #000c17;
+  --light-bg: #ffffff;
+  --light-text: #ffffff;
+  --dark-text: #000000;
+  --primary-blue: #1890ff;
+  --hover-blue: #40a9ff;
+  --text-primary: #000;
+  --bgPrimary: #fff;
+  --bgSecondary: #f9f9f9;
+  --pink: #0071bd;
+  --light-blue: #e6f7ff;
+  --border: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a:hover {
+  color: var(--pink) !important;
+}
+
+.app {
+  display: flex;
+  overflow: hidden;
+  background-color: #ffffff !important;
+  color: var(--dark-text) !important;
+}
+
+.navbar {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #ffffff !important;
+  color: var(--dark-text) !important;
+}
+
+.routes {
+  padding: 20px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #ffffff !important;
+}
+.nav-container {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  height: 100vh;
+  margin: 0px;
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+.logo-container {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Logo text color for light theme */
+.logo a {
+  letter-spacing: 1.2px;
+  color: var(--dark-text) !important;
+}
+
+/* Logo icon filter for light theme */
+.logo-container .ant-avatar img {
+  filter: brightness(0) !important; /* This will make the icon black */
+}
+
+.footer-heading {
+  letter-spacing: 1.2px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  margin: 0 0 0 15px;
+  margin-top: 10px;
+}
+.logo a {
+  letter-spacing: 1.2px;
+  color: var(--dark-text) !important;
+}
+.menu {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  color: var(--dark-text);
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: fit-content;
+  height: fit-content;
+  list-style-type: none;
+}
+@media screen and (max-width: 1000px) {
+  .menu {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+  }
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-icon {
+  color: var(--dark-text);
+  margin-right: 10px;
+}
+.link {
+  color: var(--dark-text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu-control-container {
+  width: 50px;
+  height: 40px;
+  border-radius: 6px;
+  display: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 25px !important;
+  font-size: 1.2rem !important;
+  background-color: var(--bgSecondary) !important;
+  border: none !important;
+}
+
+.loader {
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    min-width: calc(100% - 300px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+
+  .main {
+    flex: 1;
+    margin-top: 90px;
+  }
+
+  .nav-container {
+    background-color: #001529;
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+  }
+
+  .menu-control-container {
+    display: block !important;
+  }
+
+  .ant-menu {
+    position: absolute;
+    right: 0px;
+  }
+  .home-title {
+    font-size: 1.4rem !important;
+  }
+  .show-more {
+    font-size: 1.3rem !important;
+  }
+}
+
+.coin-detail-container {
+  margin: 30px;
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.coin-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.coin-heading-container .coin-name {
+  font-weight: 900;
+  color: var(--pink);
+}
+
+.coin-heading-container p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background-color: #ffffff !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.stats-container h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: var(--pink);
+}
+
+.coin-details-heading {
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--pink) !important;
+}
+
+.coin-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  background-color: #ffffff !important;
+}
+
+.coin-stats-name {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.stats {
+  font-weight: 800;
+}
+
+.coin-value-statistics-heading p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin-desc-link {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
+  background-color: #ffffff !important;
+}
+
+.coin-desc-link h2 {
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.coin-desc-link p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin-desc-link a {
+  color: var(--pink);
+}
+
+.coin-desc-link h3 {
+  font-weight: 700;
+}
+
+.coin-desc {
+  flex: 0.5;
+}
+
+.coin-links {
+  padding: 0px 20px;
+  flex: 0.5;
+}
+
+.coin-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.link-name {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.coin-link a {
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-link:hover,
+.coin-stats:hover {
+  background-color: var(--bgSecondary);
+}
+
+@media screen and (max-width: 1000px) {
+  .stats-container {
+    flex-direction: column;
+  }
+  .coin-desc-link {
+    flex-direction: column;
+  }
+  .stats-container h2 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .coin-links {
+    padding: 0px;
+  }
+  .coin-detail-container {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    margin-top: 20px;
+  }
+}
+
+.select-news {
+  width: 180px;
+}
+.news-card {
+  min-height: 300px !important;
+}
+.news-image-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.news-title {
+  width: 70%;
+}
+
+.news-image-container .img {
+  width: 100px;
+  height: 100px;
+}
+.news-card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+.provider-container {
+  display: flex;
+  justify-content: space-between;
+}
+.provider-name {
+  margin-left: 10px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+  background-color: #ffffff !important;
+}
+.chart-title {
+  color: #0071bd !important;
+}
+.price-container {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.price-change {
+  font-weight: 900 !important;
+}
+.current-price {
+  margin-top: 0px !important;
+  font-weight: 900 !important;
+}
+.home-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  background-color: #ffffff !important;
+}
+.show-more {
+  margin-top: 0px !important;
+}
+.exchange-image {
+  margin: 0px 10px !important;
+}
+.search-crypto {
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+.crypto-card-container {
+  min-height: 65vh !important;
+  background-color: #ffffff !important;
+}
+.crypto-card {
+  min-width: 250px;
+  max-height: 200px;
+}
+.crypto-card .crypto-image {
+  width: 40px;
+  margin-top: 10px;
+  object-fit: cover;
+  height: 40px;
+}
+.select-timeperiod {
+  width: 200px !important;
+  margin: 20px 0px !important;
+}
+
+.footer {
+  background-color: var(--darker-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: var(--dark-bg) !important;
+  color: #fff !important;
+}
+
+.dark-mode .navbar,
+.dark-mode .nav-container {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+.dark-mode .menu {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+.dark-mode .crypto-card .ant-card {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue) !important;
+}
+
+.dark-mode .ant-card-head-title,
+.dark-mode .ant-typography,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode .ant-statistic-title,
+.dark-mode .ant-statistic-content,
+.dark-mode .coin-details-heading,
+.dark-mode .coin-stats-name,
+.dark-mode .coin-name,
+.dark-mode .stats,
+.dark-mode .link-name {
+  color: #fff !important;
+}
+
+.dark-mode .ant-input {
+  background-color: #001529 !important;
+  border-color: #1890ff !important;
+  color: #fff !important;
+}
+
+.dark-mode .ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark-mode .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #001529 !important;
+  border-color: #1890ff !important;
+  color: #fff !important;
+}
+
+.dark-mode .ant-select-arrow {
+  color: #fff !important;
+}
+
+.dark-mode .coin-stats {
+  background-color: var(--darker-bg) !important;
+}
+
+.dark-mode .search-crypto .ant-input-wrapper {
+  background-color: #001529 !important;
+}
+
+.dark-mode .ant-select-dropdown {
+  background-color: #001529 !important;
+}
+
+.dark-mode .ant-select-item {
+  color: #fff !important;
+}
+
+.dark-mode .ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+.dark-mode .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #002140 !important;
+}
+
+.dark-mode .crypto-card:hover .ant-card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(24, 144, 255, 0.3) !important;
+}
+
+.crypto-card:hover .ant-card {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container,
+.ant-card,
+.ant-input,
+.ant-select-selector,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+.ant-typography,
+.coin-stats,
+a,
+.link {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.loader {
+  color: var(--text-primary);
+}
+
+.dark-mode .loader {
+  color: #fff;
+}
+
+.dark-mode canvas {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Home page specific dark mode styles */
+.dark-mode .heading {
+  color: #fff !important;
+}
+
+.dark-mode .home-title {
+  color: #fff !important;
+}
+
+.dark-mode .show-more a {
+  color: #1890ff !important;
+}
+
+.dark-mode .show-more a:hover {
+  color: #40a9ff !important;
+}
+
+/* Statistics in home page */
+.dark-mode .ant-statistic {
+  color: #fff !important;
+}
+
+.dark-mode .ant-statistic-content-value {
+  color: #fff !important;
+}
+
+/* Chart colors in dark mode */
+.dark-mode .chart-header {
+  color: #1890ff !important;
+}
+
+.dark-mode .price-container {
+  color: #fff !important;
+}
+
+.dark-mode .price-change,
+.dark-mode .current-price {
+  color: #fff !important;
+}
+
+/* Footer text in dark mode */
+.dark-mode .footer-heading {
+  color: #fff !important;
+}
+
+/* Global text color for dark mode */
+.dark-mode .ant-typography,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode span,
+.dark-mode div {
+  color: #fff !important;
+}
+
+/* Links in dark mode */
+.dark-mode a {
+  color: #1890ff !important;
+}
+
+.dark-mode a:hover {
+  color: #40a9ff !important;
+  opacity: 0.8;
+}
+
+/* Card content in dark mode */
+.dark-mode .ant-card-meta-title,
+.dark-mode .ant-card-meta-description {
+  color: #fff !important;
+}
+
+/* Update the dark mode background colors */
+
+/* Main background */
+.dark-mode .main {
+  background-color: #001529 !important;
+}
+
+/* Routes/content area background */
+.dark-mode .routes {
+  background-color: #001529 !important;
+}
+
+/* Layout background */
+.dark-mode .ant-layout {
+  background-color: #001529 !important;
+}
+
+/* Card container background */
+.dark-mode .crypto-card-container {
+  background-color: #001529 !important;
+}
+
+/* Stats container background */
+.dark-mode .stats-container {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+/* Ensure the background color applies to the entire app */
+.dark-mode.app,
+.dark-mode .app {
+  background-color: #001529 !important;
+}
+
+/* Portfolio styles */
+.portfolio-header {
+  margin-bottom: 2rem;
+}
+
+.dark-mode .portfolio-header h2,
+.dark-mode .portfolio-header h3 {
+  color: #fff !important;
+}
+
+.dark-mode .ant-modal-content,
+.dark-mode .ant-modal-header {
+  background-color: var(--dark-bg) !important;
+  color: var(--light-text) !important;
+}
+
+.dark-mode .ant-modal-title,
+.dark-mode .ant-modal-close {
+  color: var(--light-text) !important;
+}
+
+.dark-mode select {
+  background-color: #001529;
+  color: #fff;
+  border: 1px solid #1890ff;
+}
+
+.dark-mode select option {
+  background-color: #001529;
+  color: #fff;
+}
+
+/* Smooth transitions */
+.app,
+.main,
+.routes,
+.ant-layout,
+.crypto-card-container,
+.stats-container,
+.coin-detail-container,
+.coin-desc-link,
+.home-heading-container,
+.ant-card,
+.coin-stats,
+.ant-input,
+.ant-select-selector,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+.ant-typography,
+a,
+.link {
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* Dark mode overrides */
+.dark-mode,
+.dark-mode .app,
+.dark-mode .main,
+.dark-mode .routes,
+.dark-mode .ant-layout,
+.dark-mode .crypto-card-container,
+.dark-mode .stats-container,
+.dark-mode .coin-detail-container,
+.dark-mode .coin-desc-link,
+.dark-mode .home-heading-container {
+  background-color: var(--dark-bg) !important;
+  color: var(--light-text) !important;
+}
+
+/* Navbar specific */
+.dark-mode .navbar,
+.dark-mode .nav-container,
+.dark-mode .menu {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+/* Cards in dark mode */
+.dark-mode .ant-card {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue) !important;
+}
+
+/* Text colors in dark mode */
+.dark-mode .ant-typography,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode span,
+.dark-mode div,
+.dark-mode .ant-statistic-title,
+.dark-mode .ant-statistic-content,
+.dark-mode .coin-stats-name,
+.dark-mode .stats {
+  color: var(--light-text) !important;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+}
+
+/* Stats and details sections */
+.dark-mode .coin-stats {
+  background-color: var(--darker-bg) !important;
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* Form elements in dark mode */
+.dark-mode .ant-input,
+.dark-mode .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.dark-mode select {
+  background-color: var(--darker-bg) !important;
+  border-color: var(--primary-blue) !important;
+  color: var(--light-text) !important;
+}
+
+/* Modal in dark mode */
+.dark-mode .ant-modal-content,
+.dark-mode .ant-modal-header {
+  background-color: var(--dark-bg) !important;
+  color: var(--light-text) !important;
+}
+
+.dark-mode .ant-modal-title,
+.dark-mode .ant-modal-close {
+  color: var(--light-text) !important;
+}
+
+/* Links in dark mode */
+.dark-mode a {
+  color: var(--primary-blue) !important;
+}
+
+.dark-mode a:hover {
+  color: var(--hover-blue) !important;
+}
+
+/* Chart container */
+.dark-mode .chart-header {
+  background-color: var(--dark-bg) !important;
+}
+
+/* Add these styles to fix text visibility in both themes */
+
+/* Light theme text colors */
+.coin-stats-name,
+.coin-stats .stats,
+.coin-details-heading,
+.coin-desc-link p,
+.coin-desc-link a,
+.coin-desc-link h3 {
+  color: var(--dark-text) !important;
+}
+
+/* Dark theme text colors */
+.dark-mode .coin-stats-name,
+.dark-mode .coin-stats .stats,
+.dark-mode .coin-details-heading,
+.dark-mode .coin-desc-link p,
+.dark-mode .coin-desc-link h3 {
+  color: var(--light-text) !important;
+}
+
+/* Fix for remove button in dark mode */
+.dark-mode .ant-btn-dangerous {
+  color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+}
+
+.dark-mode .ant-btn-dangerous:hover {
+  color: #fff !important;
+  background-color: #ff4d4f !important;
+}
+
+/* Fix for statistics container */
+.coin-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.coin-stats-name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Fix for statistics text in both themes */
+.stats {
+  font-weight: 800;
+}
+
+/* Fix for heading colors in both themes */
+.coin-details-heading {
+  font-weight: 700;
+  margin-top: 20px;
+  color: var(--dark-text);
+}
+
+.dark-mode .coin-details-heading {
+  color: var(--light-text);
+}
+
+/* Add these styles for the remove button */
+.remove-button {
+  transition: all 0.3s ease !important;
+}
+
+.remove-button:hover {
+  color: #fff !important;
+  background-color: #ff4d4f !important;
+}
+
+/* Dark mode specific styles for remove button */
+.dark-mode .remove-button {
+  color: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+  background: transparent !important;
+}
+
+.dark-mode .remove-button:hover {
+  color: #fff !important;
+  background-color: #ff4d4f !important;
+}
+
+/* Update the stats container styles */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Update coin stats styles */
+.coin-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  background-color: transparent !important;
+}
+
+/* Update menu styles for light theme */
+.menu {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  color: var(--dark-text);
+}
+
+/* Update link colors for light theme */
+.menu .link {
+  color: var(--dark-text);
+}
+
+.menu .menu-icon {
+  color: var(--dark-text);
+}
+
+/* Card styles for light theme */
+.ant-card {
+  border: 1px solid #d9d9d9;
+  background-color: transparent !important;
+}
+
+/* Navbar styles for light theme */
+.navbar {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+.nav-container {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+/* Dark mode overrides - keep dark backgrounds for dark theme */
+.dark-mode .stats-container {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+.dark-mode .coin-stats {
+  background-color: var(--darker-bg) !important;
+}
+
+.dark-mode .menu {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+.dark-mode .menu .link {
+  color: var(--light-text);
+}
+
+.dark-mode .menu .menu-icon {
+  color: var(--light-text);
+}
+
+.dark-mode .navbar,
+.dark-mode .nav-container {
+  background-color: var(--darker-bg) !important;
+  border: none;
+}
+
+/* Update the coin details container */
+.coin-detail-container {
+  margin: 30px;
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.dark-mode .coin-detail-container {
+  background-color: var(--dark-bg) !important;
+  border: none;
+}
+
+/* Update portfolio card styles */
+.crypto-card .ant-card {
+  border: 1px solid #d9d9d9;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.crypto-card .ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .crypto-card .ant-card {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue);
+}
+
+/* Update modal styles for light theme */
+.ant-modal-content {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+.dark-mode .ant-modal-content {
+  background-color: var(--dark-bg) !important;
+  border: none;
+}
+
+/* Update cryptocurrency card styles for light theme */
+.crypto-card-container {
+  padding: 20px;
+}
+
+.crypto-card .ant-card {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.crypto-card .ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-card .ant-card-head {
+  background-color: transparent !important;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* Portfolio specific styles for light theme */
+.portfolio-header .ant-card {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.search-crypto {
+  margin-bottom: 20px;
+}
+
+.search-crypto .ant-input {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+}
+
+/* Dark mode overrides */
+.dark-mode .crypto-card .ant-card,
+.dark-mode .portfolio-header .ant-card {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue);
+}
+
+.dark-mode .crypto-card .ant-card-head {
+  background-color: var(--darker-bg) !important;
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+.dark-mode .search-crypto .ant-input {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue);
+  color: var(--light-text);
+}
+
+/* Fix for statistics cards in portfolio */
+.portfolio-stats-card {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.dark-mode .portfolio-stats-card {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue);
+}
+
+/* Fix for modal in portfolio */
+.ant-modal {
+  background-color: transparent;
+}
+
+.ant-modal-content {
+  background-color: transparent !important;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.dark-mode .ant-modal-content {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--primary-blue);
+}
+
+/* Update link colors in coin details for dark mode */
+.dark-mode .coin-links a {
+  color: var(--light-text) !important;
+}
+
+.dark-mode .coin-links a:hover {
+  color: var(--primary-blue) !important;
+  opacity: 0.8;
+}
+
+.dark-mode .coin-link {
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+.dark-mode .coin-link:hover {
+  background-color: var(--darker-bg);
+}
+
+/* Update link name color in dark mode */
+.dark-mode .link-name {
+  color: var(--light-text) !important;
+}
+
+/* Update coin name color in dark mode */
+.dark-mode .coin-name {
+  color: var(--light-text) !important;
+}
+
+/* Update logo styles for light theme */
+.logo a {
+  letter-spacing: 1.2px;
+  color: var(--dark-text) !important;
+}
+
+/* Logo icon filter for light theme */
+.logo-container .ant-avatar img {
+  filter: brightness(0) !important; /* This will make the icon black */
+}
+
+/* Keep white color for dark theme */
+.dark-mode .logo a {
+  color: var(--light-text) !important;
+}
+
+/* Dark mode overrides for logo */
+.dark-mode .logo-container .ant-avatar img {
+  filter: brightness(1) !important; /* This will restore the original icon color */
+}
+
+/* Add hover effect for both themes */
+.logo a:hover {
+  opacity: 0.8;
+}
